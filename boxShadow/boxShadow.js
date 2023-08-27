@@ -29,7 +29,8 @@ insetCheckbox.addEventListener('input', updateShadowPreview);
 
 function updateShadowPreview() {
 
-    const opacityAdjusted = opacity.value == 1 ? "" : opacity.value * 100;
+    let opacityAdjusted = opacity.value == 1 ? "" : (Math.floor(opacity.value * 255)).toString(16);
+    if(opacityAdjusted.length == 1){opacityAdjusted = 0 + opacityAdjusted}
     const shadowStyle = `${insetCheckbox.checked ? 'inset' : ''} ${axeX.value}px ${axeY.value}px ${blur.value}px ${spread.value}px ${color.value}${opacityAdjusted}`;
     previousShadows.pop(); // Supprimer la dernière ombre pour éviter les doublons
     previousShadows.push(shadowStyle);
