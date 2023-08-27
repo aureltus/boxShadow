@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /*border: inset 1px red;*/
+
 }
 
 body {
@@ -11,8 +11,6 @@ body {
     font-size: 16px;
     color: #09021f;
 }
-
-/*input:hover{transform: scale(1.1);}*/
 
 h1{
     
@@ -25,7 +23,6 @@ h1{
 .attribut div {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
-    /*grid-template-rows: 1fr;*/
     border-radius: 3px;
     border: 1px solid #444; /* Couleur de bordure assombrie */
     background-color: #333; /* Couleur de fond assombrie */
@@ -59,7 +56,6 @@ section div label{
   border: 1px solid black;
   min-width: 40px;
   max-width: 50px;
-  /*padding: 6px; /* Ajout d'un padding pour l'espace interne */
   text-align: center; /* Centrer le contenu horizontalement */
   background-color: #222;
   color: #007bff;
@@ -89,7 +85,6 @@ cursor: pointer;
 
 .attribut{
     display: grid;
-   /* height: 400px;*/
     width: 45%;
     border: inset 1px #444; /* Couleur de bordure assombrie */
     border-radius: 3px;
@@ -102,7 +97,6 @@ cursor: pointer;
 
 .zoneBox{
     padding: 5px;
-    /*height: 400px;*/
     min-height: 400px;
     width: 45%;
     min-width: 300px;
@@ -112,7 +106,6 @@ cursor: pointer;
     display: grid;
     justify-content: center;
     align-items: center;
-   /* z-index: -1;*/
     overflow: hidden;
 }
 
@@ -121,7 +114,6 @@ cursor: pointer;
     height: 100px;
     width: 100px;
     background-color: rgba(19, 28, 41); /* Couleur de fond bleue sombre légèrement transparente */
-   /* z-index: -1;*/
 }
     
 /* Style pour les fieldsets */
@@ -251,19 +243,9 @@ width: fit-content;
 }
 
 .shadow-item button {
-    /*background-color: #007bff;
-    color: #09021f;
-    border: none;
-    border-radius: 4px;*/
     padding: 2px 2px;
-    font-size: 12px;/*
-    cursor: pointer;
-    transition: background-color 0.3s ease;*/
+    font-size: 12px;
 }
-
-/*.shadow-item button:hover {
-    background-color: #0056b3;
-}*/
 
 /* Style pour le bouton "Ajouter ombre" */
 .btn {
@@ -280,10 +262,11 @@ width: fit-content;
   background-color: #0056b3;
 }
 
-/*#textCodeShadow{
-z-index: 1;
-width: 80px;
-height: auto;
-overflow-wrap: normal;
-}*/
+@media screen and (max-width: 720px){
+
+    h1{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+}
 
