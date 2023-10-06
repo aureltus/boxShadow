@@ -1,54 +1,50 @@
 * {
-    margin: 0;
-    padding: 0;
-
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: linear-gradient(135deg, #292929, #121212);
   background-attachment: fixed;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    color: #09021f;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #09021f;
 }
 
-h1{
-    
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 20px;
-    margin-bottom: 20px;
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .attribut div {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
-    border-radius: 3px;
-    border: 1px solid #444; /* Couleur de bordure assombrie */
-    background-color: #333; /* Couleur de fond assombrie */
-    column-gap: 15px;
-    padding: 3px;
-
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+  border-radius: 3px;
+  border: 1px solid #444; /* Couleur de bordure assombrie */
+  background-color: #333; /* Couleur de fond assombrie */
+  column-gap: 15px;
+  padding: 3px;
 }
 
-section div label{
-    text-align: center ;
-    margin-top: auto;
-    margin-bottom: auto;
-    grid-column: 1;
-    border-radius: 3px;
-    border: 1px solid #444; /* Couleur de bordure assombrie */
-    background-color: #555; /* Couleur de fond assombrie */
-    min-width: 90px;
+section div label {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  grid-column: 1;
+  border-radius: 3px;
+  border: 1px solid #444; /* Couleur de bordure assombrie */
+  background-color: #555; /* Couleur de fond assombrie */
+  min-width: 90px;
 }
-    
 
-.num-result{
-    grid-column: 2/6;
-    align-items: center;
-    margin-right: 10%;
-    margin-left: 5%;
-    max-width: 200px;
+.num-result {
+  grid-column: 2/6;
+  align-items: center;
+  margin-right: 10%;
+  margin-left: 5%;
+  max-width: 200px;
 }
 
 .range-result {
@@ -59,94 +55,113 @@ section div label{
   text-align: center; /* Centrer le contenu horizontalement */
   background-color: #222;
   color: #007bff;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   /*font-size: 16px;*/
 }
 
-#colorShadow{height: 20px;
-grid-column: 2/6;
-margin-left: 5%;
-margin-right: 10%;
-align-items: center;
-width: auto;
-max-width: 200px;
-border: none;
-background: none;
-cursor: pointer;
+#colorShadow {
+  height: 20px;
+  grid-column: 2/6;
+  margin-left: 5%;
+  margin-right: 10%;
+  align-items: center;
+  width: auto;
+  max-width: 200px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-
-.weapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap-reverse;
+.weapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
 }
 
-.attribut{
-    display: grid;
-    width: 45%;
-    border: inset 1px #444; /* Couleur de bordure assombrie */
-    border-radius: 3px;
-    padding: 5px;
-    min-width: 300px;
-    row-gap: auto;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+.attribut {
+  display: grid;
+  width: 45%;
+  border: inset 1px #444; /* Couleur de bordure assombrie */
+  border-radius: 3px;
+  padding: 5px;
+  min-width: 300px;
+  row-gap: auto;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.zoneBox{
-    padding: 5px;
-    min-height: 400px;
-    width: 45%;
-    min-width: 300px;
-    border: inset 1px #111; /* Couleur de bordure sombre */
-    border-radius: 3px;
-    background-color: rgba(5, 39, 84, 0.8); /* Couleur de fond bleue sombre légèrement transparente */
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.zoneBox {
+  padding: 5px;
+  min-height: 400px;
+  width: 45%;
+  min-width: 300px;
+  border: inset 1px #111; /* Couleur de bordure sombre */
+  border-radius: 3px;
+  background-color: rgba(
+    5,
+    39,
+    84,
+    0.8
+  ); /* Couleur de fond bleue sombre légèrement transparente */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.box{
-    display: block;
-    height: 100px;
-    width: 100px;
-    background-color: rgba(19, 28, 41); /* Couleur de fond bleue sombre légèrement transparente */
+.box {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-color: rgba(
+    19,
+    28,
+    41
+  ); /* Couleur de fond bleue sombre légèrement transparente */
 }
-    
+
 /* Style pour les fieldsets */
 fieldset {
   border: 1px solid #007bff; /* Bordure avec la couleur bleue futuriste */
   border-radius: 4px;
   margin: 2px;
   padding: 5px;
-  background-color: rgba(5, 39, 84, 0.5); /* Couleur de fond assombrie avec transparence */
+  background-color: rgba(
+    5,
+    39,
+    84,
+    0.5
+  ); /* Couleur de fond assombrie avec transparence */
 }
 
 legend {
   font-weight: bold;
   color: #007bff; /* Couleur bleue futuriste */
-  background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond assombrie avec transparence */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Couleur de fond assombrie avec transparence */
   padding: 1px 2px;
   border-radius: 4px;
 }
 
 input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
-  }
-  
-  /* Removes default focus */
-  input[type="range"]:focus {
-    outline: none;
-  }
-  
-  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
-  /* Slider track */
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* Slider track */
 input[type="range"]::-webkit-slider-runnable-track {
   background-color: #101d28;
   border-radius: 2rem;
@@ -174,7 +189,7 @@ input[type="range"]:hover::-webkit-slider-thumb {
   background-color: #0056b3;
 }
 
-  /* Checkbox styles */
+/* Checkbox styles */
 input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
@@ -188,8 +203,12 @@ input[type="checkbox"] {
   margin-left: 15px;
 }
 
-input[type="checkbox"]:hover {border: 1px solid #0056b3;}
-input[type="checkbox"]:hover::before {background-color: #0056b3;}
+input[type="checkbox"]:hover {
+  border: 1px solid #0056b3;
+}
+input[type="checkbox"]:hover::before {
+  background-color: #0056b3;
+}
 
 /* Custom checkbox thumb */
 input[type="checkbox"]::before {
@@ -219,32 +238,32 @@ input[type="checkbox"]:focus {
 
 /* Style futuriste pour les éléments créés */
 
-#previousShadowsContainer{
-display: flex;
-justify-content: flex-start;
-flex-direction: row;
-flex-wrap: wrap;
-width: fit-content;
-
+#previousShadowsContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: fit-content;
 }
 
 .shadow-item {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: none;
-    margin: 1px;
-    background-color: #222;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #09021f;
-    font-family: 'Arial', sans-serif;
-    font-size: 12px;width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: none;
+  margin: 1px;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #09021f;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  width: 130px;
 }
 
 .shadow-item button {
-    padding: 2px 2px;
-    font-size: 12px;
+  padding: 2px 2px;
+  font-size: 12px;
 }
 
 /* Style pour le bouton "Ajouter ombre" */
@@ -262,11 +281,9 @@ width: fit-content;
   background-color: #0056b3;
 }
 
-@media screen and (max-width: 720px){
-
-    h1{
+@media screen and (max-width: 720px) {
+  h1 {
     margin-top: 30px;
     margin-bottom: 10px;
+  }
 }
-}
-
