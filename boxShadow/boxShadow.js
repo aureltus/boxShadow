@@ -11,7 +11,8 @@ const insetCheckbox = document.querySelector("#inset");
 
 const widthBox = document.getElementById("widthBox"),
   heightBox = document.getElementById("heightBox"),
-  borderRadius = document.getElementById("borderRadius");
+  borderRadius = document.getElementById("borderRadius"),
+  colorBox = document.getElementById("colorShadowBox");
 
 const shadowPreview = document.getElementById("shadowPreview");
 const previousShadows = [];
@@ -20,6 +21,7 @@ box.style.boxShadow = `${axeX.value}px ${axeY.value}px ${blur.value}px ${spread.
 
 color.addEventListener("input", updateShadowPreview);
 insetCheckbox.addEventListener("input", updateShadowPreview);
+let combinedShadows;
 
 function updateShadowPreview() {
   let opacityAdjusted =
@@ -27,15 +29,17 @@ function updateShadowPreview() {
   if (opacityAdjusted.length == 1) {
     opacityAdjusted = 0 + opacityAdjusted;
   }
-  const shadowStyle = `${insetCheckbox.checked ? "inset" : ""} ${
+  /*const*/ shadowStyle = `${insetCheckbox.checked ? "inset" : ""} ${
     axeX.value
   }px ${axeY.value}px ${blur.value}px ${spread.value}px ${
     color.value
   }${opacityAdjusted}`;
   previousShadows.pop(); // Supprimer la dernière ombre pour éviter les doublons
   previousShadows.push(shadowStyle);
-  const combinedShadows = previousShadows.join(", ");
+  /*const*/ combinedShadows = previousShadows.join(", ");
   shadowPreview.style.boxShadow = combinedShadows;
+
+  copyInput();
 }
 
 btn.addEventListener("click", () => {
@@ -46,11 +50,21 @@ btn.addEventListener("click", () => {
   updateShadowPreview();
 });
 
+function copyInput() {
+  const elem = document.querySelector(".shadowInput");
+  elem.value = combinedShadows;
+  elem.focus();
+  elem.selectionStart = elem.selectionEnd = input.value.length;
+}
+
 function boxSize() {
   box.style.height = `${heightBox.value}px`;
   box.style.width = `${widthBox.value}px`;
   box.style.borderRadius = `${borderRadius.value}px`;
+  box.style.backgroundColor = `${colorBox.value}`;
 }
+
+colorBox.addEventListener("input", boxSize);
 
 const rangeResults = document.querySelectorAll(".range-result");
 rangeResults.forEach(function (rangeResult) {
@@ -116,3 +130,9 @@ function updatePreviousShadows() {
   });
 }
 updatePreviousShadows();
+
+const btnCopie = document.getElementById("copie");
+btnCopie.addEventListener("click", () => {
+  document.getElementById("shadowInput").select();
+  document.execCommand("copy");
+});
