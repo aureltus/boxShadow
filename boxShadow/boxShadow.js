@@ -53,8 +53,6 @@ btn.addEventListener("click", () => {
 function copyInput() {
   const elem = document.querySelector(".shadowInput");
   elem.value = combinedShadows;
-  elem.focus();
-  elem.selectionStart = elem.selectionEnd = input.value.length;
 }
 
 function boxSize() {
