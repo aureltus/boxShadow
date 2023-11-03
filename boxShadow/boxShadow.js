@@ -98,7 +98,7 @@ numResult.forEach(function (numResult) {
 function updateShadowPreview() {
   // Récupère l'opacité ajustée (sous forme hexadécimale)
   let opacityAdjusted =
-    opacity.value === 1 ? "" : Math.floor(opacity.value * 255).toString(16);
+    opacity.value == 1 ? "" : Math.floor(opacity.value * 255).toString(16);
   if (opacityAdjusted.length === 1) {
     // Ajoute un zéro de remplissage si nécessaire
     opacityAdjusted = 0 + opacityAdjusted;
