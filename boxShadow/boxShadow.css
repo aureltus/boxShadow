@@ -11,6 +11,10 @@ body {
   color: #09021f;
 }
 
+/****************************************
+ * Main
+ ****************************************/
+
 h1 {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -18,12 +22,36 @@ h1 {
   margin-bottom: 20px;
 }
 
+.weapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  min-height: 80dvh;
+}
+
+/****************************************
+ * Attributs pour les ombres et box
+ ****************************************/
+
+.attribut {
+  display: grid;
+  width: 45%;
+  border: inset 1px #444; /* Couleur de bordure assombrie */
+  border-radius: 3px;
+  padding: 5px;
+  min-width: 300px;
+  row-gap: auto;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .attribut div {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
   border-radius: 3px;
-  border: 1px solid #444; /* Couleur de bordure assombrie */
-  background-color: #333; /* Couleur de fond assombrie */
+  border: 1px solid #444;
+  background-color: #333;
   column-gap: 15px;
   padding: 3px;
 }
@@ -34,8 +62,8 @@ section div label {
   margin-bottom: auto;
   grid-column: 1;
   border-radius: 3px;
-  border: 1px solid #444; /* Couleur de bordure assombrie */
-  background-color: #555; /* Couleur de fond assombrie */
+  border: 1px solid #444;
+  background-color: #555;
   min-width: 90px;
 }
 
@@ -56,7 +84,6 @@ section div label {
   background-color: #222;
   color: #007bff;
   font-family: "Arial", sans-serif;
-  /*font-size: 16px;*/
 }
 
 #colorShadow,
@@ -73,78 +100,28 @@ section div label {
   cursor: pointer;
 }
 
-.weapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap-reverse;
-  min-height: 80dvh;
-}
+/****************************************
+ * Sous-catégorie : Add shadow
+ ****************************************/
 
-.attribut {
-  display: grid;
-  width: 45%;
-  border: inset 1px #444; /* Couleur de bordure assombrie */
-  border-radius: 3px;
-  padding: 5px;
-  min-width: 300px;
-  row-gap: auto;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.zoneBox {
-  padding: 5px;
-  min-height: 400px;
-  width: 45%;
-  min-width: 300px;
-  border: inset 1px #111; /* Couleur de bordure sombre */
-  border-radius: 3px;
-  background-color: rgba(
-    5,
-    39,
-    84,
-    0.8
-  ); /* Couleur de fond bleue sombre légèrement transparente */
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.box {
-  display: block;
-  height: 100px;
-  width: 100px;
-  background-color: #131c29; /* Couleur de fond bleue sombre légèrement transparente */
-}
-
-/* Style pour les fieldsets */
-fieldset {
-  border: 1px solid #007bff; /* Bordure avec la couleur bleue futuriste */
+/* Style pour le bouton "Ajouter ombre" */
+.btn {
+  background-color: #007bff;
+  color: #09021f;
+  border: none;
   border-radius: 4px;
-  margin: 2px;
-  padding: 5px;
-  background-color: rgba(
-    5,
-    39,
-    84,
-    0.5
-  ); /* Couleur de fond assombrie avec transparence */
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-legend {
-  font-weight: bold;
-  color: #007bff; /* Couleur bleue futuriste */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Couleur de fond assombrie avec transparence */
-  padding: 1px 2px;
-  border-radius: 4px;
+.btn:hover {
+  background-color: #0056b3;
 }
+
+/****************************************
+ * Sous-catégorie : Zone input
+ ****************************************/
 
 input[type="range"] {
   -webkit-appearance: none;
@@ -158,7 +135,6 @@ input[type="range"]:focus {
   outline: none;
 }
 
-/******** Chrome, Safari, Opera and Edge Chromium styles ********/
 /* Slider track */
 input[type="range"]::-webkit-slider-runnable-track {
   background-color: #101d28;
@@ -234,7 +210,41 @@ input[type="checkbox"]:focus {
   box-shadow: 0 0 5px rgba(15, 138, 175, 0.5);
 }
 
-/* Style futuriste pour les éléments créés */
+/****************************************
+ * Sous-catégorie : Zone box
+ ****************************************/
+
+fieldset {
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  margin: 2px;
+  padding: 5px;
+  background-color: rgba(5, 39, 84, 0.5);
+}
+
+legend {
+  font-weight: bold;
+  color: #007bff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1px 2px;
+  border-radius: 4px;
+}
+
+/****************************************
+ * Sous-catégorie : Zone copie
+ ****************************************/
+
+#shadowInput {
+  grid-column: 1/5;
+}
+
+#copie {
+  grid-column: 5/7;
+}
+
+/****************************************
+ * Sous-catégorie : Zone suppr shadow
+ ****************************************/
 
 #previousShadowsContainer {
   display: flex;
@@ -264,27 +274,29 @@ input[type="checkbox"]:focus {
   font-size: 12px;
 }
 
-/* Style pour le bouton "Ajouter ombre" */
-.btn {
-  background-color: #007bff;
-  color: #09021f;
-  border: none;
-  border-radius: 4px;
-  padding: 6px 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/****************************************
+ * Zone box et shadow
+ ****************************************/
+
+.zoneBox {
+  padding: 5px;
+  min-height: 400px;
+  width: 45%;
+  min-width: 300px;
+  border: inset 1px #111;
+  border-radius: 3px;
+  background-color: rgba(5, 39, 84, 0.8);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.btn:hover {
-  background-color: #0056b3;
-}
-
-#shadowInput {
-  grid-column: 1/5;
-}
-
-#copie {
-  grid-column: 5/7;
+.box {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-color: #131c29;
 }
 
 @media screen and (max-width: 720px) {
